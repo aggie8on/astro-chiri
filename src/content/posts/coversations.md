@@ -5,6 +5,7 @@ pubDate: 'July 26 2025'
 heroImage: '../../assets/Capture3.PNG'
 ---
 
+![Image alt text](Capture3.PNG)
 In a recent tweet, I shared a perspective on communication and connection: “Only argue with people with same concepts as you, explain and open up to those who value you and see your worth. These are the only times you'll have to disagree on a thing for the better. And this is the only time you'll have differing thoughts without one assuming negativity.” This idea underscores the importance of choosing who we engage with thoughtfully, reserving arguments for those who share our foundational understanding and vulnerability for those who truly value us. Let’s unpack this concept, exploring why selective communication fosters productive disagreements and meaningful connections, with examples to bring it to life.
 
 Arguing with Shared Concepts
