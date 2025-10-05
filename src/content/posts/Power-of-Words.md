@@ -2,7 +2,7 @@
 title: 'The Emotional Power of Words: It’s All in the Reader’s Mood'
 description: 'Masaba land comprises several eastern districts i.e. Sironko, Mbale, Manafwa, Namisindwa, and Bududa District.'
 pubDate: 'May 29 2025'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/Capture.PNG'
 ---
 
 In a recent tweet, I shared a thought-provoking idea: “Words Have No Emotions. Empathy Depends On The Reader’s Mood.” At first glance, this might seem like a bold claim. After all, don’t words carry immense emotional weight? Don’t they inspire, hurt, or uplift us? While words can indeed evoke strong feelings, their emotional impact isn’t inherent—they’re a vessel, and the reader’s mood shapes how that vessel is filled. Let’s dive into this concept, exploring why words themselves are neutral and how empathy, sparked by those words, hinges on the reader’s emotional state.
