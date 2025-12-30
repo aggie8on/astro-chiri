@@ -5,8 +5,23 @@ import ThemeToggle from '@/components/ui/ThemeToggle.astro'
 
 <header>
   <nav>
-    <a href="/">{themeConfig.site.title}</a>
-    <ThemeToggle />
+    <div class="nav-brand">
+      <a href="/">{themeConfig.site.title}</a>
+    </div>
+    <div class="nav-menu">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+    </div>
+    <div class="nav-actions">
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <ThemeToggle />
+    </div>
   </nav>
 </header>
 <style>
@@ -17,12 +32,87 @@ import ThemeToggle from '@/components/ui/ThemeToggle.astro'
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
-  header a {
+  .nav-brand a {
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     text-decoration: none;
     min-width: 3rem;
     display: inline-block;
   }
+  .nav-menu {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-menu a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-regular);
+    transition: opacity 0.2s ease;
+  }
+  .nav-menu a:hover {
+    opacity: 0.7;
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    color: var(--text-primary);
+  }
+  
+  .menu-toggle:hover {
+    background-color: var(--selection);
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+    }
+    .nav-menu {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      margin-top: 1rem;
+      display: none;
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
 </style>
+
+<script>
+  // Toggle mobile menu
+  document.addEventListener('DOMContentLoaded', () => {
+    const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    menuToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && 
+          !navMenu.contains(e.target) && 
+          !menuToggle.contains(e.target) &&
+          navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+      }
+    });
+  });
+</script>
